@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vocabulary Challenge</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Advanced Vocabulary Challenge</h1>
+    <div class="text-container">
+      <p>
+        The project demanded a 
+        <span class="fill-in">
+          <input type="text" data-answer="meticulous" />
+          <span class="tooltip">?</span>
+          <span class="hint">Showing great attention to detail</span>
+        </span> 
+        level of planning, as even a minor mistake could have 
+        <span class="fill-in">
+          <input type="text" data-answer="pernicious" />
+          <span class="tooltip">?</span>
+          <span class="hint">Harmful effect, especially gradually</span>
+        </span> 
+        consequences.
+      </p>
+      <p>
+        Their leader, although 
+        <span class="fill-in">
+          <input type="text" data-answer="capricious" />
+          <span class="tooltip">?</span>
+          <span class="hint">Given to sudden changes of mood or behavior</span>
+        </span>, 
+        occasionally made brilliant strategic moves.
+      </p>
+      <p>
+        The team remained 
+        <span class="fill-in">
+          <input type="text" data-answer="resilient" />
+          <span class="tooltip">?</span>
+          <span class="hint">Able to recover quickly from difficulties</span>
+        </span> 
+        through the challenges, drawing strength from their shared goal.
+      </p>
+      <p>
+        When asked to describe the final result, the designer smiled: “It’s simply 
+        <span class="fill-in">
+          <input type="text" data-answer="ineffable" />
+          <span class="tooltip">?</span>
+          <span class="hint">Too great to be described in words</span>
+        </span>.”
+      </p>
+    </div>
+
+    <button id="checkBtn">Check Answers</button>
+  </div>
+
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="resultMessage"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
