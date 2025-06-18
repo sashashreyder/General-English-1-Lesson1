@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Translink C1 Mobile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="top-header">
+    <img src="translink-logo.png" alt="Translink Logo" class="logo" />
+    <p class="exclusive"><em>Exclusively for Translink Students</em></p>
+  </div>
+
+  <div class="card">
+    <h1>Interactive Vocabulary Challenge</h1>
+    <p class="intro">Fill in the blanks using the correct words. Tap <span class="hint-symbol">?</span> for hints.</p>
+
+    <p class="task-text">
+      Social media trends are 
+      <input type="text" data-answer="ephemeral">
+      <span class="hint" data-hint="Lasting for a very short time.">?</span>.
+      The beauty of the sunset was 
+      <input type="text" data-answer="ineffable">
+      <span class="hint" data-hint="Too great to be expressed in words.">?</span>.
+      The clear sky was an 
+      <input type="text" data-answer="auspicious">
+      <span class="hint" data-hint="Conducive to success; favorable.">?</span> sign for the event.
+      Fake news can have a 
+      <input type="text" data-answer="pernicious">
+      <span class="hint" data-hint="Having a harmful effect, especially gradually.">?</span> influence.
+      He’s a 
+      <input type="text" data-answer="voracious">
+      <span class="hint" data-hint="Wanting or consuming great quantities.">?</span> reader.
+    </p>
+
+    <button id="checkBtn">✔ Check Answers</button>
+  </div>
+
+  <div id="resultModal" class="modal hidden">
+    <div class="modal-content">
+      <p id="resultText"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

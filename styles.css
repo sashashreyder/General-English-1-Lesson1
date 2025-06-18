@@ -1,0 +1,205 @@
+/* === BASE === */
+html {
+  overflow-x: hidden;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(-45deg, #2d3e50, #3b5364, #264f58, #3a4e61);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* === HEADER === */
+.top-header {
+  text-align: center;
+  padding: 20px 10px;
+}
+
+.logo {
+  max-width: 250px;
+  height: auto;
+}
+
+.exclusive {
+  font-size: 1rem;
+  color: #d0dec7;
+  font-weight: 500;
+}
+
+/* === CARD === */
+.card {
+  margin: 20px;
+  padding: 24px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
+  width: 95%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* === HEADINGS === */
+h1 {
+  font-size: 1.5rem;
+  color: #009fe3;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.intro {
+  font-size: 1.05rem;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+/* === TASK TEXT === */
+.task-text {
+  font-size: 1rem;
+  line-height: 2rem;
+  color: #2b2b2b;
+}
+
+/* === INPUT === */
+input[type="text"] {
+  width: 100px;
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  margin: 0 4px;
+}
+
+input.correct {
+  border-color: #a0c92e;
+  background-color: #f2ffe5;
+}
+
+input.incorrect {
+  border-color: #ff6b6b;
+  background-color: #fff0f0;
+}
+
+/* === HINT TOOLTIP === */
+.hint {
+  color: #009fe3;
+  position: relative;
+  cursor: help;
+}
+
+.hint::after {
+  content: attr(data-hint);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  color: #000;
+  border: 1px solid #ccc;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  white-space: normal;
+  z-index: 10;
+  width: 200px;
+  text-align: center;
+}
+
+.hint:hover::after {
+  opacity: 1;
+}
+
+/* === BUTTON === */
+#checkBtn {
+  display: block;
+  margin: 30px auto 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  background: #e1f5fe;
+  border: 1px solid #009fe3;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#checkBtn:hover {
+  background: #b3e5fc;
+}
+
+/* === MODAL === */
+.modal {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 24px 32px;
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.hidden {
+  display: none;
+}
+
+/* === GRADIENT BACKGROUND ANIMATION === */
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 75%; }
+  50% { background-position: 100% 50%; }
+  75% { background-position: 50% 25%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* === DESKTOP OVERRIDES === */
+@media (min-width: 768px) {
+  .card {
+    margin: 40px auto;
+    padding: 40px;
+    max-width: 700px;
+  }
+
+  .logo {
+    max-width: 150px;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  .intro {
+    font-size: 1.15rem;
+  }
+
+  input[type="text"] {
+    width: 130px;
+    font-size: 1rem;
+  }
+
+  .task-text {
+    font-size: 1.1rem;
+    line-height: 2.4rem;
+  }
+
+  .modal-content {
+    font-size: 1.2rem;
+  }
+}
+
